@@ -1,0 +1,20 @@
++----------------------------+      +----------------------------+      +----------------------------+
+| 1. Customer Submits Dispute | ---> | 2. AI Classifies Dispute   | ---> | 3. Assign Priority Level   |
+| - Transaction ID            |      | - Fraud, Chargeback,       |      | - High, Medium, Low        |
+| - Dispute Reason            |      |   Duplicate, Billing Error |      +----------------------------+
+| - Amount                    |      +----------------------------+                |
++----------------------------+                                                     v
+                                                                  +----------------------------+
+                                                                     | 4. Route to Appropriate Team|
++----------------------------+                                       | - Fraud Detection Team     |
+| 5. AI-Generated Recommendations|                   <------          | - Chargeback Team          |
+| - Automate low-risk disputes |                                      | - Billing Team             |
+| - Escalate high-risk cases   |                                     | - Transaction Reconciliation|
++----------------------------+                                       +----------------------------+
+|               |                     
+                v
++----------------------------+
+| 6. Notify Customer            | 
+| - Dispute Status Update     | 
+| - Transaction Reconciliation|
++----------------------------+ +

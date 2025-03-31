@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-# AI Model to classify disputes (basic rule-based for demo)
+# Dummy function for classifying disputes based on description
 def classify_dispute(description):
     if "fraud" in description.lower():
         return "Fraud"
@@ -13,7 +13,7 @@ def classify_dispute(description):
     else:
         return "Duplicate Transaction"
 
-# Rule-based priority assignment
+# Dummy function to assign priority based on customer history
 def assign_priority(customer_history):
     if customer_history.get('frequent_disputes', 0) > 5:
         return "High"
@@ -30,7 +30,7 @@ def submit_dispute():
     # Step 1: Classify the dispute
     dispute_type = classify_dispute(dispute_description)
 
-    # Step 2: Assign priority
+    # Step 2: Assign priority based on customer history
     priority = assign_priority(customer_history)
 
     # Step 3: Recommend action based on classification

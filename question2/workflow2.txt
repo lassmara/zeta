@@ -1,0 +1,22 @@
++-----------------------------------------------+      +-----------------------------------------------+
+| 1. Customer Submits Data (Frontend UI)        | ---> | 2. Front-End Sends Data to Backend API        |
+| - Loan Application Form                       |      | - API Request: /loan_application (POST)      |
+| - Personal Details (Name, Income, etc.)       |      | - Data Sent: Income, Loan Amount, Term, etc. |
+| - Loan Amount, Term, Credit Score             |      +-----------------------------------------------+
++-----------------------------------------------+                |
+                |                                                  v
+                v                                       +-----------------------------------------------+
++-----------------------------------------------+      | 3. Backend Receives Data & Processes         |
+| 4. Backend Sends Response to Front-End       | ---> | - Validate Customer Data                     |
+| - Loan Eligibility Score (Approved/Denied)   |      | - Loan Eligibility Logic (AI-Based/Rule-Based)|
+| - Human-Readable Recommendation (Action)     |      | - Loan Eligibility Score and Recommendation  |
+| - Dispute History (for tracking purposes)    |      +-----------------------------------------------+
++-----------------------------------------------+                |
+                |                                                  v
+                v                                       +-----------------------------------------------+
++-----------------------------------------------+      | 5. Front-End Displays Result to Customer     |
+| 6. Front-End Displays Result to Customer     | ---> | - Eligibility Status (Approved, Pending, etc.)|
+| - Eligibility Status (Approved, Pending, etc.)|      | - Loan Recommendation (Next Steps, Action)   |
+| - Loan Recommendation (Next Steps, Action)   |      | - Dispute Status (Resolved/Pending)          |
+| - Dispute Status (Resolved/Pending)          |      +-----------------------------------------------+
++-----------------------------------------------+
